@@ -7,16 +7,18 @@ app.get('/',(req,res)=>{
     res.send("Hello World")
 })
 
-app.post('/', (req, res) => {
-    res.send('Got a POST request')
+app.post('/api/items', (req, res) => {
+    const newItem = req.body;
+    newItem.id=1;
+    res.status(201).json({message: 'New item created!', data: newItem})
   })
 
-  app.put('/user', (req, res) => {
-    res.send('Got a PUT request at /user')
+  app.put('/api/items/:id', (req, res) => {
+    res.status(201).json({message: 'item created edited', data: newItem})
   })
 
-  app.delete('/user', (req, res) => {
-    res.send('Got a DELETE request at /user')
+  app.delete('/api/items/:id', (req, res) => {
+    res.status(201).json({message: 'item deleted', data: newItem})
   })
 
 app.listen(PORT,()=>{
