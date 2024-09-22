@@ -18,7 +18,7 @@ app.post('/api/items', (req, res) => {
   })
 
   app.delete('/api/items/:id', (req, res) => {
-    res.status(201).json({message: 'item deleted', data: newItem})
+    res.status(201).json({message: 'item deleted!', data: newItem})
   })
 
 app.listen(PORT,()=>{
