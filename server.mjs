@@ -16,7 +16,7 @@ app.post('/api/items', (req, res) => {
   app.put('/api/items/:id', (req, res) => {
     res.status(201).json({message: 'item created edited!', data: newItem})
   })
-
+//postman check for delete
   app.delete('/api/items/:id', (req, res) => {
     res.status(201).json({message: 'item deleted!', data: newItem})
   })
