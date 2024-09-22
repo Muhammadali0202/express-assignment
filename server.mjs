@@ -12,7 +12,7 @@ app.post('/api/items', (req, res) => {
     newItem.id=1;
     res.status(201).json({message: 'New item created', data: newItem})
   })
-
+//postman check for put
   app.put('/api/items/:id', (req, res) => {
     res.status(201).json({message: 'item created edited!', data: newItem})
   })
