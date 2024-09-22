@@ -10,7 +10,7 @@ app.get('/',(req,res)=>{
 app.post('/api/items', (req, res) => {
     const newItem = req.body;
     newItem.id=1;
-    res.status(201).json({message: 'New item created!', data: newItem})
+    res.status(201).json({message: 'New item created', data: newItem})
   })
 
   app.put('/api/items/:id', (req, res) => {
