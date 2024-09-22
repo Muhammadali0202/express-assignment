@@ -6,7 +6,7 @@ const PORT = 3000;
 app.get('/',(req,res)=>{
     res.send("Hello Word")
 })
-
+//postman check for post
 app.post('/api/items', (req, res) => {
     const newItem = req.body;
     newItem.id=1;
